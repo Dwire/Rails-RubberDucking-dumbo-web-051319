@@ -1,0 +1,18 @@
+<h1>NEW DUCK</h1>
+
+<%= form_for @duck do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <%= f.collection_select :student_id, Student.all, :id, :name %>
+  <%= f.submit %>
+<% end %>
+
+<%# form_with model: @duck do |f| %>
+  <%# f.text_field :name %>
+  <%# f.label :description %>
+  <%# f.text_area :description %>
+  <%# f.collection_select :student_id, Student.all, :id, :name %>
+  <%# f.submit %>
+<%# end %>

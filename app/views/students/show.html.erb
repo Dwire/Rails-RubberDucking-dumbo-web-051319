@@ -1,0 +1,10 @@
+<h1>Name: <%= @student.name %></h1>
+<h3>Mod: <%= @student.mod %></h3>
+
+<h5>MY DUCKS</h5>
+<hr>
+<% @ducks.each do | duck | %>
+  <h6> name: <%= link_to duck.name, duck_path(duck) %> </h6>
+  <h6> description: <%= duck.description %> </h6>
+  <hr>
+<% end %>
