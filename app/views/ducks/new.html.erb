@@ -1,21 +1,30 @@
 <h1>NEW DUCK</h1>
 
-<% if flash[:errors] %>
-  <ul>
-    <% flash[:errors].each do |error|%>
-      <li><%= error %></li>
-    <% end %>
-  </ul>
-<% end %>
+<%= render 'form' %>
 
-<%= form_for @duck do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :description %>
-  <%= f.text_area :description %>
-  <%= f.collection_select :student_id, @students, :id, :name %>
-  <%= f.submit %>
-<% end %>
+<!-- MOVED BELOW CODE TO A FORM PARTIAL -->
+
+<%# if flash[:errors] %>
+  <!--  <ul> -->
+    <%# flash[:errors].each do |error|%>
+   <!--   <li><%# error %></li>  -->
+    <%# end %>
+  <!-- </ul> -->
+<%# end %>
+
+<%# form_for @duck do |f| %>
+  <%# f.label :name %>
+  <%# f.text_field :name %>
+  <%# f.label :description %>
+  <%# f.text_area :description %>
+  <%# f.collection_select :student_id, @students, :id, :name %>
+  <%# f.submit %>
+<%# end %>
+
+
+
+
+<!-- EXAMPLE OF the same thing using FORM_WITH -->
 
 <%# form_with model: @duck do |f| %>
   <%# f.text_field :name %>
