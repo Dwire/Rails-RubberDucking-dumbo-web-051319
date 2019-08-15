@@ -2,3 +2,4 @@
 <p><%= @duck.description %></p>
 
 <%= button_to 'All Ducks', ducks_path, method: :get %>
+<%= button_to 'Edit Duck', edit_duck_path(@duck), method: :get %>
